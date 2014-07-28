@@ -1,0 +1,27 @@
+{
+  "name": "validator",
+  "spm":{
+	"alias":"validator"
+  },
+  "version": "1.0.0",
+  "readmeFilename": "README.md",
+  "description": "表单校验类，表单操作类",
+  "homepage": "https://github.com/huhm/validator",
+  "keywords": [
+    "validator"
+  ],
+  "author": "huhuimei2008@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huhm/validator.git"
+  },
+  "main": "./src/validator.js",
+  "dependencies": {
+    "jquery": "*"
+  },
+  "devDependencies": {
+    "grunt-cli": "*",
+    "grunt": "*",
+    "grunt-contrib-uglify": "0.4.1"
+  }
+}
