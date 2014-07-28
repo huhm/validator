@@ -1,0 +1,369 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body {
+  max-width: 620px;
+  margin: auto;
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px;
+}
+body > *:first-child {
+  margin-top: 0 !important;
+}
+body > *:last-child {
+  margin-bottom: 0 !important;
+}
+a {
+  color: #4183C4;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative;
+}
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none;
+}
+h1 tt, h1 code {
+  font-size: inherit;
+}
+h2 tt, h2 code {
+  font-size: inherit;
+}
+h3 tt, h3 code {
+  font-size: inherit;
+}
+h4 tt, h4 code {
+  font-size: inherit;
+}
+h5 tt, h5 code {
+  font-size: inherit;
+}
+h6 tt, h6 code {
+  font-size: inherit;
+}
+h1 {
+  font-size: 28px;
+  color: black;
+  text-align: center;
+}
+h6 {
+  text-align: center;
+}
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 14px;
+}
+h6 {
+  color: #777777;
+  font-size: 14px;
+}
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0;
+}
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+body > h1:first-child + h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0;
+}
+li p.first {
+  display: inline-block;
+}
+li {
+  margin: 0;
+}
+ul, ol {
+  padding-left: 30px;
+}
+ul :first-child, ol :first-child {
+  margin-top: 0;
+}
+dl {
+  padding: 0;
+}
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+blockquote {
+  border-left: 2px solid #dddddd;
+  padding: 0 15px;
+  color: #777777;
+}
+blockquote > :first-child {
+  margin-top: 0;
+}
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+table {
+  padding: 0;
+  border-collapse: collapse;
+}
+tr {
+  border-top: 1px solid #cccccc;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+th {
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+td {
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+th :first-child, td :first-child {
+  margin-top: 0;
+}
+th :last-child, td :last-child {
+  margin-bottom: 0;
+}
+img {
+  max-width: 100%;
+}
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+pre {
+  background-color: #303030;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+}
+pre code {
+  color: #f2f2f2;
+  border: none;
+  padding: 0;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+pre tt {
+  background-color: transparent;
+  border: none;
+}
+@media print {
+  table, pre {
+    page-break-inside: avoid;
+  }
+}
+ul li a{
+	margin-right:10px;
+}
+
+</style>
+<title>Validator</title>
+
+</head>
+<body>
+<h1>Validator</h1>
+
+<p><a href="http://aui.github.io/artDialog/">首页</a> &gt; <a href="http://aui.github.io/artDialog/doc/index.html">文档与示例</a></p>
+
+	<hr /> 
+	<p>validator —— 表单校验及表单操作类。</p>
+
+<ol>
+	<li>支持表单单个or批量获取、设置值</li>
+	<li>支持部分、整体校验</li>
+	<li>支持异步校验,支持ajax</li>
+	<li>支持表单联动校验</li>
+	<li>清除校验状态</li>
+	<li>销毁校验</li>
+	<li>内建多种常用校验</li> 
+</ol>
+
+
+<h2>文档导航</h2> 
+<ul>
+	<li><a href="#module">引入 validator</a></li>
+	<li><a href="#quickref">快速参考</a> 
+		<ul>
+			<li><a href="#quickref-basic">直接设置</a></li> 
+			<li><a href="#quickref-basic">DOM设置</a></li> 
+			<li><a href="#quickref-basic">全部校验</a></li> 
+			<li><a href="#quickref-basic">部分校验</a></li> 
+		</ul>
+	</li>
+	<li><a href="#api">FormHelper(Validator.FormHelper)</a> 基类方法
+		<ul>
+			<li><a href="#api-GetInputDom">GetInputDom(itemName)</a>  获取输入对象</li>
+			<li><a href="#api-GetValue">GetValue(itemName)</a>  获取[name=itemName]的元素值</li>
+			<li><a href="#api-GetText">GetText(itemName) </a>获取select的显示值</li>
+			<li><a href="#api-GetValues">GetValues() </a>  获取表单中带[name]属性的元素值</li>
+			<li><a href="#api-SetValue">SetValue(itemName, newValue, [bTriggerValidateOrTriggerEvent])</a>   设置form字段的值</li>
+			<li><a href="#api-SetValues">SetValues(valueObj, [bTriggerValidateOrTriggerEvent])</a>  批量设置表单字段值 </li> 
+		</ul>
+	</li> 
+	<li>
+		<a href="#api">Validator类方法</a>
+		<ul>
+			<li><a href="#api-TestAll">TestAll([validateEndCallback])</a>  全部校验</li>
+			<li><a href="#api-TestPart">TestPart($partContainerOrElementArray,[validateEndCallback])</a>  部分校验</li>
+			<li><a href="#api-Test">Test(itemNameOrOption, [ validateEndCallback], [ _bIsInputing], [_triggerTimeStamp])</a>校验单个表单</li>
+			<li><a href="#api-Destroy">Destroy() </a> 销毁当前校验(删除校验状态,取消事件监听)</li>
+			<li><a href="#api-Destroy">Init([validatorOption], [formItemOptionMap]) </a> 重新启用</li>
+			<li><a href="#api-Clear">Clear([itemName])</a>  清除验证状态</li>
+			<li><a href="#api-ItemOption">ItemOption(optionName, newOption)</a>  修改校验项配置</li> 
+		</ul>
+	</li> 
+	<li>
+		<a href="#static">静态方法</a>
+		<ul>
+			<li><a href="static-BuildInValidator">BuildInValidator(name, [valiFunc]) </a> 修改or获取内建校验函数</li>
+			<li><a href="static-"></a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#goption">formOption--表单配置选项</a>
+		<ul>
+			<li><a href="goption-status">status</a>  表单项校验状态的class</li>
+			<li><a href="goption-status">showErrorCnt</a>  显示的错误数（0）</li>
+			<li><a href="goption-status">formItemSel </a> 表单项container(此处添加校验状态Class)</li>
+			<li><a href="goption-helpBlock">helpBlock</a></li>
+			<ul>
+				<li><a href="goption-helpBlock-autoAdd">autoAdd </a> 若找不到helpBlock是否自动添加,默认true</li>
+				<li><a href="goption-helpBlock-html">html</a>  添加的消息容器</li>
+				<li><a href="goption-helpBlock-selector">selector</a>  消息容器选择器,默认".help-block"</li>
+				<li><a href="goption-helpBlock-container">container</a>  消息容器添加的位置,默认".controls"</li>
+			</ul>
+		</ul>
+	</li>
+	<li>
+		<a href="#option">formItemOption--表单项选项</a>
+		<ul>
+			<li><a href="option-name">type</a>input对象类型  可自动检测</li>
+			<li><a href="option-bindName">bindName </a> 绑定对象的名称（值变化，会触发校验）</li>
+			<li><a href="option-open">open</a>是否开启校验</li>
+			<li><a href="option-triggerTarget">triggerTarget </a> 触发事件对象,为null时触发对象为input自身</li>
+			<li><a href="option-required">required</a>  是否必填 [data-validator="required" data-validator-required="该字段不可为空"]</li>
+			<li><a href="option-tests">tests </a> 同步校验集 [data-validator-tests,data-validator-message,data-validator-param-1]</li>
+			<li><a href="option-ajaxValidate">ajaxValidate  </a>异步校验</li>
+			<li><a href="option-successTip">successTip</a>  校验成功时显示的文本，默认不显示</li>
+			<li><a href="option-tipTarget">tipTarget</a>  显示消息容器,默认自动检测，添加</li>  
+		</ul>
+	</li>
+	<li>
+		<a href="#buildin">内建校验</a>
+		<ul>
+			<li><a href="static-telephone">telephone(val)</a>手机号</li>
+			<li><a href="static-contact">contact(val)</a>电话或手机号</li>
+			<li><a href="static-phone">phone(val)</a>电话号码</li>
+			<li><a href="static-email">email(val)</a>邮箱</li>
+			<li><a href="static-minLength">minLength(val, length)</a>最小长度</li>
+			<li><a href="static-maxLength">maxLength(val, length)</a>最大长度</li>
+			<li><a href="static-minByteLength">minByteLength(val, length)</a>最小字节数</li>
+			<li><a href="static-maxByteLength">maxByteLength(val, length)</a>最大字节数</li>
+			<li><a href="static-numberRange">numberRange(val, minMaxSet)</a>整数,数字区间</li>
+			<li><a href="static-floatRange">floatRange(val, minMaxSet)</a>浮点型数据区间</li> 
+			<li><a href="static-floatPrecision">floatPrecision(val, minMaxSet)</a>浮点精度判断</li> 
+			<li><a href="static-equal">equal(val, val2)</a>相等</li> 
+			<li><a href="static-equal">equal(val, val2)</a>不相等</li> 
+			<li><a href="static-notEqual">notEqual(val, val2)</a>相等</li> 
+			<li><a href="static-name">name(val)</a>中文、字母、数字、下划线</li> 
+			<li><a href="static-checkboxCount">checkboxCount(val, minMaxSet)</a>选择checkbox数量</li> 
+		</ul>
+	</li>
+</ul>
+<h2><span id="module">引入 validator</span></h2>
+
+<h3>1.直接引用</h3>
+
+<pre><code>&lt;script src="lib/jquery.js"&gt;&lt;/script&gt; 
+&lt;script src="dist/validator.js"&gt;&lt;/script&gt;
+//..
+</code></pre>
+
+<h3>2.作为 RequireJS 或 SeaJS 的模块引入</h3>
+
+<pre><code>var dialog = require('./src/validator');
+//..
+</code></pre>
+ 
+<blockquote><strong>注意：</strong>$作为全局变量使用</code></blockquote>
+
+<h2><span id="quickref">快速参考</span></h2>
+
+<h3><span id="quickref-basic">普通校验</span></h3> 
+<pre><code>var validator=new Validator($formWrap); 
+</code></pre>
+    
+</body>
+</html>
