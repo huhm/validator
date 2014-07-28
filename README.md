@@ -1,6 +1,7 @@
 ﻿表单校验插件   1.0.0 validator   
 -------------------  
 	ahthor:huhuimei2008@gmail.com
+	[文档](http://huhm/github.com/validator)
 ### 功能
 	表单校验
 	.control-group 上添加状态class
